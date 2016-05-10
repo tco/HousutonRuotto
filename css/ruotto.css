@@ -1,0 +1,47 @@
+#ruotto     { position: absolute; width: 25%; top: 10%; left: -100%; transition: left 100ms linear }
+#head       { width: 100%; }
+#eye-left   { position: absolute; width: 5%; top: 51%; left: 35%; }
+#eye-right  { position: absolute; width: 5%; top: 51%; left: 73%; }
+
+#ruotto.reveal { left: 10% }
+#ruotto.s #mouth-s { visibility: visible; }
+#mouth-s { position: absolute; visibility: hidden; width: 45%; top: 71%; left: 30%; }
+#ruotto.o #mouth-o { visibility: visible; }
+#mouth-o { position: absolute; visibility: hidden; width: 12%; top: 76%; left: 54%; }
+#ruotto.n #mouth-n { visibility: visible; }
+#mouth-n { position: absolute; visibility: hidden; width: 45%; top: 71%; left: 30%; }
+#ruotto.i #mouth-i { visibility: visible; }
+#mouth-i { position: absolute; visibility: hidden; width: 45%; top: 75%; left: 33%; }
+#ruotto.a #mouth-a { visibility: visible; }
+#mouth-a { position: absolute; visibility: hidden; width: 20%; top: 75%; left: 45%; }
+#ruotto.u #mouth-u { visibility: visible; }
+#mouth-u { position: absolute; visibility: hidden; width: 12%; top: 74%; left: 49%; }
+
+#torso              { position: absolute; width: 100%; top: 73%; left: -40%; z-index: -1; transform: rotate(30deg); }
+#arm-right-shoulder { position: absolute; width: 25%; top: 83%; left: -40%; z-index: -1; transform: rotate(50deg); }
+#arm-right-elbow    { position: absolute; width: 25%; top: 90%; left: -40%; z-index: -1; transform: rotate(-90deg); }
+#arm-right-hand     { position: absolute; width: 25%; top: 101%; left: 0%; z-index: -1; }
+#arm-left-elbow     { position: absolute; width: 25%; top: 90%; left: 40%; z-index: -1; transform: rotate(-90deg); }
+#arm-left-hand      { position: absolute; width: 25%; top: 101%; left: 80%; z-index: -1; }
+#hip                { position: absolute; width: 75%; top: 154%; left: -60%; z-index: -1; transform: rotate(15deg); }
+
+#wall-left {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 12%;
+    border-right: 3px solid black; background-color: rgba(220, 220, 230, 0.75);
+}
+#wall-right {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 70%;
+    border-left: 3px solid black; background-color: rgba(220, 220, 230, 0.75);
+}
+
+#text {
+    box-sizing: border-box;
+    display: none; position: absolute; width: 60%;  height: 40%; left: 35%; top: 50%;
+    padding: 10%;
+    font-family: sans-serif;
+    background-image: url('../materials/H_Puhekupla3_reverse.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 20px;
+}
+#text.show { display: block; }

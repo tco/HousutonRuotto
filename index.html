@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Housuton Inc. - Ruotto</title>
+        <link rel="icon" href="materials/favicon.ico">
+
+        <script src="js/ruotto.js"></script>
+        <link rel="stylesheet" href="css/ruotto.css" />
+        <style>
+            #logo {
+                text-align: center;
+                padding: 20px;
+            }
+            #animation {
+                position: absolute;
+                width:  800px;  left: 50%;  margin-left: -400px;
+                height: 600px;  top: 50%;   margin-top: -300px;
+                border: 8px solid black;    border-radius: 5px; overflow: hidden;
+            }
+            #play {
+                position: absolute;
+                width: 200px;   left: 50%;  margin-left: -100px;
+                height: 150px;  top: 50%;   margin-top: -75px;
+                font-size: 50px;            z-index: 2;
+                border: 8px solid black;    border-radius: 5px; background-color: white;
+            }
+            #play.hide {
+                display: none;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="animation">
+            <div id="logo">
+                <img src="materials/housuton-logo.png" />
+            </div>
+            <button id="play">&#9654;</button>
+        </div>
+        <script>
+            var ruotto = new Ruotto('animation', 'play');
+            ruotto.addTrack('audio/sori_onx_laturii_kellaa.mp3', [
+                { timeout: 0,       mouth: 's' },
+                { timeout: 100,     mouth: 'o', text: 'Sori,' },
+                { timeout: 200,     mouth: 'i' },
+                { timeout: 300,     mouth: 'n' },
+                { timeout: 400,     mouth: 'o', text: 'onx'},
+                { timeout: 600,     mouth: 'a' },
+                { timeout: 700,     mouth: 'i', text: 'laturii' },
+                { timeout: 800,     mouth: 'a', text: 'kellää?' },
+                { timeout: 1000,    mouth: 'n' }
+            ]);
+
+            ruotto.addTrack('audio/hei_onx_kellaa_vihreit_kalsareita.mp3', [
+                { timeout: 0,       mouth: 'n' },
+                { timeout: 100,     mouth: 'i', text: 'Hei,' },
+                { timeout: 200,     mouth: 'o' },
+                { timeout: 300,     mouth: 's', text: 'onx'},
+                { timeout: 400,     mouth: 'i' },
+                { timeout: 600,     mouth: 'a', text: 'kellää'  },
+                { timeout: 700,     mouth: 'i' },
+                { timeout: 800,     mouth: 'a', text: 'vihreit' },
+                { timeout: 900,     mouth: 'i' },
+                { timeout: 1000,    mouth: 'a', text: 'kalsareita?' },
+                { timeout: 1200,    mouth: 'n' }
+            ]);
+
+            ruotto.addTrack('audio/hei_onx_kellaan_tabascoo.mp3', [
+                { timeout: 0,       mouth: 'n' },
+                { timeout: 100,     mouth: 'i', text: 'Hei,' },
+                { timeout: 200,     mouth: 'o' },
+                { timeout: 300,     mouth: 's', text: 'onx'},
+                { timeout: 400,     mouth: 'i' },
+                { timeout: 600,     mouth: 'a', text: 'kellää'  },
+                { timeout: 700,     mouth: 'i' },
+                { timeout: 800,     mouth: 'a', text: 'tabascoo?' },
+                { timeout: 900,     mouth: 'o' },
+                { timeout: 1200,    mouth: 'n' }
+            ]);
+
+            ruotto.addTrack('audio/hei_onx_kukaan_nahny_mun_porchee.mp3', [
+                { timeout: 0,       mouth: 'n' },
+                { timeout: 100,     mouth: 'i', text: 'Hei,' },
+                { timeout: 200,     mouth: 'o' },
+                { timeout: 300,     mouth: 's', text: 'onx'},
+                { timeout: 400,     mouth: 'i' },
+                { timeout: 600,     mouth: 'a', text: 'kukaan'  },
+                { timeout: 700,     mouth: 'i' },
+                { timeout: 800,     mouth: 'a', text: 'nähny mun' },
+                { timeout: 900,     mouth: 'o', text: 'porchee?' },
+                { timeout: 1200,    mouth: 'n' },
+                { timeout: 1800,    mouth: 'a', text: 'Mä' },
+                { timeout: 1900,    mouth: 'i', text: 'en tiedä' },
+                { timeout: 2000,    mouth: 'a' },
+                { timeout: 2100,    mouth: 'i', text: 'minne' },
+                { timeout: 2200,    mouth: 'o', text: 'mä oon' },
+                { timeout: 2300,    mouth: 'a', text: 'jättäny' },
+                { timeout: 2400,    mouth: 'i', text: 'sen...' },
+                { timeout: 2500,    mouth: 'n' }
+            ]);
+
+            ruotto.addTrack('audio/hei_onx_teil_uutta_seiskaa.mp3', [
+                { timeout: 0,       mouth: 's' },
+                { timeout: 100,     mouth: 'o', text: 'Hei,' },
+                { timeout: 200,     mouth: 'i' },
+                { timeout: 300,     mouth: 'n' },
+                { timeout: 400,     mouth: 'o', text: 'onx'},
+                { timeout: 600,     mouth: 'a' },
+                { timeout: 700,     mouth: 'i', text: 'teil uutta' },
+                { timeout: 800,     mouth: 'a', text: 'seiskaa?' },
+                { timeout: 1000,    mouth: 'n' }
+            ]);
+
+            ruotto.addTrack('audio/moi_hei_onx_kellaa_coppertonei.mp3', [
+                { timeout: 0,       mouth: 's' },
+                { timeout: 200,     mouth: 'o', text: 'Moi,' },
+                { timeout: 400,     mouth: 'n'},
+                { timeout: 500,     mouth: 'i', text: 'hei' },
+                { timeout: 600,     mouth: 'n' },
+                { timeout: 700,     mouth: 'o', text: 'onx'},
+                { timeout: 800,     mouth: 'a', text: 'kellää' },
+                { timeout: 900,     mouth: 'o', text: 'coppertonei?' },
+                { timeout: 1000,    mouth: 'i' },
+                { timeout: 1200,    mouth: 'n' }
+            ]);
+
+            document.getElementById('play').addEventListener('click', function() {
+                ruotto.play(ruotto.getRandomTrack());
+            });
+
+        </script>
+    </body>
+</html>
