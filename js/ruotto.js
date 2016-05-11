@@ -123,6 +123,8 @@
         this.text.classList.remove('show');
         this.text.innerHTML = '';
         this.sequenceStarted = false;
+        this.container.removeChild(this.audio);
+        this.audio = createAndAddElement(this.container, 'audio');
     };
 
     Ruotto.prototype.play = function play(track) {
@@ -131,6 +133,7 @@
         this.ruotto.classList.add('reveal');
 
         function play() {
+            self.audio.currentTime = 0;
             self.audio.play();
         }
 
@@ -146,6 +149,7 @@
             self.reset();
         });
         this.audio.src = track;
+        this.audio.play();
     }
 
 }(window, window.document));
